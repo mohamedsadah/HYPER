@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request
+from flask import Flask, request, Response
 
 app = Flask(__name__)
 
@@ -36,6 +36,7 @@ def ussd():
       response = "END Invalid choice"
 
   # Send the response back to the API
+  response = Response(text="Plain text response", mimetype="text/plain")
   return response
 
 if __name__ == '__main__':
