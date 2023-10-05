@@ -3,7 +3,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route("/main.py", methods = ['POST'])
+@app.route("/main", methods = ['POST'])
 def ussd():
   # Read the variables sent via POST from our API
   session_id   = request.values.get("sessionId", None)
